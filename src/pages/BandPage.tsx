@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 
 function BandPage() {
   return (
-    <div className="relative max-h-dvh w-screen overflow-hidden flex items-center justify-center p-4">
+    <div className="relative min-h-dvh w-screen overflow-y-auto flex items-center justify-center p-[clamp(12px,4vw,24px)]">
       {/* Background */}
       <img
         src={Sfondo}
@@ -15,15 +15,15 @@ function BandPage() {
         className="absolute inset-0 z-0 h-full w-full object-cover pointer-events-none select-none"
       />
 
-      {/* Content card */}
-      <div className="relative z-10 p-6 flex flex-col gap-6 border border-red-500">
+      {/* Content */}
+      <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(14px,3.5vw,24px)]">
         <div className="flex items-center gap-3">
-          <h1 className="font-[Lexington] text-foreground tracking-wide leading-tight text-4xl">
+          <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(1.75rem,6vw,2.5rem)]">
             TIME HAVEN CLUB
           </h1>
         </div>
 
-        <div className=" text-[1.2rem] font-[BrosOskon90]">
+        <div className="font-[BrosOskon90] text-[clamp(1rem,3.2vw,1.25rem)]">
           <p>Enzo Jester Somma – voce e chitarra</p>
           <p>Enza Maugeri – voce</p>
           <p>Salvo Savatteri – chitarra</p>
@@ -37,15 +37,16 @@ function BandPage() {
           alt="La band Time Haven Club"
           loading="lazy"
           decoding="async"
-          className="w-full rounded-[22px] object-cover aspect-[16/9] shadow-[0_6px_20px_rgba(0,0,0,0.25)]"
+          className="w-full rounded-[clamp(12px,4vw,22px)] object-cover aspect-[16/9] shadow-[0_6px_20px_rgba(0,0,0,0.25)]"
         />
 
-        <div className="flex flex-col gap-2">
-
-        <h2 className="italic font-black font-[BrosOskon90] text-2xl">Biografia</h2>
-        <p className="text-[1.2rem] leading-5 overflow-scroll h-32 font-[BrosOskon90]">
-          Questa sera vi presenteremo, per la prima volta dal vivo, un opera che
-          nasce dal buio, ma non per spaventarvi, ma per raccontarvi una storia,
+        <div className="flex flex-col gap-[clamp(8px,2.5vw,12px)]">
+          <h2 className="italic font-[BrosOskon90] font-semibold [font-synthesis:weight_style] text-[clamp(1.125rem,3.5vw,1.5rem)]">
+            Biografia
+          </h2>
+          <p className="font-[BrosOskon90] text-[clamp(1rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
+            Questa sera vi presenteremo, per la prima volta dal vivo, un’opera che
+            nasce dal buio, ma non per spaventarvi, ma per raccontarvi una storia,
           una storia che, forse, è anche la vostra. Un concept album ispirato
           alle atmosfere e ai tormenti di Edgar Allan Poe, dove vi addentrerete
           nel labirinto mentale di un uomo che ha deciso, con grande stile e un
@@ -70,12 +71,11 @@ function BandPage() {
           Benvenuti nei meandri di Faulks! <br />
           <br />
           Time Haven Club.
-        </p>
+          </p>
         </div>
 
-
         <div className="flex justify-end">
-          <Link to="/menu" className="text-base italic">
+          <Link to="/menu" className="italic text-[clamp(0.95rem,3vw,1.05rem)]">
             ← Torna al menu
           </Link>
         </div>
@@ -85,3 +85,4 @@ function BandPage() {
 }
 
 export default BandPage;
+
