@@ -1,5 +1,7 @@
 
 import { Button } from './ui/button'
+import ThcLogo from '/src/assets/images/thc-logo.png'
+import FaulksLanding from '/src/assets/images/faulks-landing.png'
 
 function LandingPage() {
  return (
@@ -8,14 +10,14 @@ function LandingPage() {
     >
 
       <div className=' h-[50%] pt-12 items-center flex flex-col justify-between '>
-        <div className='items-center flex flex-col just'>
+        <div className='items-center flex flex-col justify-center'>
 
-        <img  src="/src/assets/images/thc-logo.png" alt="" />
+        <img  src={ThcLogo} alt="" />
         <p className='text-[#FEF3D9] font-[BrosOskon90] font-light text-[1.8rem]'>presentano</p>
         </div>
 
         <div className='items-center w-[80%]'>
-          <img  src="/src/assets/images/faulks-landing.png" alt="" />
+          <img  src={FaulksLanding} alt="" />
         </div>
       </div>
 
