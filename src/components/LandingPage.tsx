@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import ThcLogo from "/src/assets/images/thc-logo.png";
 import FaulksLanding from "/src/assets/images/faulks-landing.png";
+import { Link } from "@tanstack/react-router";
 
 function LandingPage() {
   return (
@@ -18,17 +19,19 @@ function LandingPage() {
         </div>
       </div>
 
-      <Button
-        variant="start"
-        className="liquid-glass"
-        size="start"
-      >
-        INIZIA
-      </Button>
+      <Link to="/menu">
+        <Button
+          variant="start"
+          className="liquid-glass"
+          size="start"
+        >
+          INIZIA
+        </Button>
+      </Link>
     </div>
   );
 }
 
-// [url("/src/assets/images/landing-page-bg.png")]
+
 
 export default LandingPage;
