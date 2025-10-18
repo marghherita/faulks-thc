@@ -20,8 +20,6 @@ function LandingPage() {
 
       <Button
         variant="start"
-        className=" supports-[backdrop-filter:blur(0px)]:bg-white/10
-        supports-[backdrop-filter:blur(0px)]:backdrop-blur-md"
         size="start"
       >
         INIZIA
