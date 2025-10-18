@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from "@tailwindcss/vite"
+import { qrcode } from 'vite-plugin-qrcode';
 import path from 'path'
 
 // https://vite.dev/config/
@@ -17,11 +18,12 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
+    qrcode() 
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-    server: { host: true, port: 5173, strictPort: false }
+  server: { host: true, port: 5173, strictPort: true }
 })
