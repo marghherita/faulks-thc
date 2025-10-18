@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: lexington;
+  font-family: Lexington;
   src: url('./assets/fonts/lexington_high.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
