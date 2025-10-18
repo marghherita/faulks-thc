@@ -1,3 +1,4 @@
+import MenuPage from '@/pages/MenuPage'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/menu')({
@@ -5,5 +6,5 @@ export const Route = createFileRoute('/menu')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/menu"!</div>
+  return <MenuPage />
 }

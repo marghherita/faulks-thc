@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { Button } from "../components/ui/button";
 import ThcLogo from "/src/assets/images/thc.svg?react";
 import FaulksLanding from "/src/assets/images/faulks-landing.svg?react";
 import { Link } from "@tanstack/react-router";
