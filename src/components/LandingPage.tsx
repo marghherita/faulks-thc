@@ -4,7 +4,7 @@ import { Button } from './ui/button'
 function LandingPage() {
  return (
     <div
-      className='relative bg-blue-500 bg-cover bg-no-repeat bg-center w-screen flex items-end justify-center pb-16 border-3 border-red-500 h-dvh'
+      className='relative bg-[url("/src/assets/images/landing-page-bg.png")] bg-cover bg-no-repeat bg-center w-screen flex items-end justify-center pb-16  h-dvh'
     >
       <Button
         variant="start"
