@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button'
 import BandButton from '/src/assets/images/band-button.svg?react'
 import FaulksButton from '/src/assets/images/faulks-button.svg?react'
 import TracklistButton from '/src/assets/images/tracklist-button.svg?react'
