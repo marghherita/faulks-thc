@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: Lexington;
-  src: url('./assets/fonts/lexington_high.ttf') format('ttf');
+  src: url('./assets/fonts/lexington_high.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,6 +24,14 @@
   src: url('./assets/fonts/ZTBrosOskon90s-Regular.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: BrosOskon90;
+  src: url('./assets/fonts/ZTBrosOskon90s-Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -222,3 +230,18 @@
   -webkit-filter: url(#glass-distortion);
 }
 
+/* Typography helpers (Tailwind-powered) */
+@layer components {
+  /* Title style */
+  .t-title {
+    @apply font-[BrosOskon90] text-foreground font-bold tracking-wide leading-tight ;
+  }
+
+  /* Body copy style */
+  .t-body {
+    @apply font-[BrosOskon90] font-light text-foreground text-base  leading-relaxed;
+  }
+  .t-body-muted {
+    @apply text-muted-foreground;
+  }
+}

@@ -3,6 +3,7 @@ import FaulksButton from "/src/assets/images/faulks-button.svg?react";
 import TracklistButton from "/src/assets/images/tracklist-button.svg?react";
 import LyricsButton from "/src/assets/images/lyrics-button.svg?react";
 import Sfondo from "/src/assets/images/sfondo.png";
+import { Link } from "@tanstack/react-router";
 
 function MenuPage() {
   return (
@@ -16,7 +17,10 @@ function MenuPage() {
       />
       {/* Foreground content */}
       <div className="relative z-10 h-dvh pt-12 flex flex-col items-center justify-center gap-6">
-        <BandButton />
+        <Link to="/band">
+          <BandButton />
+        </Link>
+       
         <FaulksButton />
         <TracklistButton />
         <LyricsButton />
