@@ -21,6 +21,7 @@ function LandingPage() {
       <Button
         variant="start"
         size="start"
+        className="liquid-glass"  
       >
         INIZIA
       </Button>
