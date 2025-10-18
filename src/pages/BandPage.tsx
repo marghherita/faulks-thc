@@ -16,7 +16,7 @@ function BandPage() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(14px,3.5vw,24px)] p-8">
+      <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(18px,3.5vw,24px)] p-8">
         <div className="flex items-center gap-3">
           <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(2rem,6vw,2.5rem)]">
             TIME HAVEN CLUB
@@ -41,7 +41,7 @@ function BandPage() {
         />
 
         <div className="flex flex-col gap-[clamp(8px,2.5vw,12px)]">
-          <h2 className="italic font-[BrosOskon90] font-semibold [font-synthesis:weight_style] text-[clamp(1.4rem,3.5vw,1.5rem)]">
+          <h2 className="italic font-[BrosOskon90] font-semibold[font-synthesis:weight_style] text-[clamp(1.4rem,3.5vw,1.5rem)]">
             Biografia
           </h2>
           <p className="font-[BrosOskon90] text-[clamp(1.2rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
