@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 
 function BandPage() {
   return (
-    <div className="relative h-dvh w-screen overflow-hidden flex items-center justify-center p-4">
+    <div className="relative max-h-dvh w-screen overflow-hidden flex items-center justify-center p-4">
       {/* Background */}
       <img
         src={Sfondo}
@@ -16,7 +16,7 @@ function BandPage() {
       />
 
       {/* Content card */}
-      <div className="relative z-10 p-6 flex flex-col gap-6">
+      <div className="relative z-10 p-6 flex flex-col gap-6 border border-red-500">
         <div className="flex items-center gap-3">
           <h1 className="font-[Lexington] text-foreground tracking-wide leading-tight text-4xl">
             TIME HAVEN CLUB
