@@ -12,18 +12,18 @@ function BandPage() {
         aria-hidden
         decoding="async"
         loading="eager"
-        className="absolute inset-0 z-0 h-full w-full object-cover pointer-events-none select-none"
+        className="absolute inset-0 z-0 h-full w-full object-fit pointer-events-none select-none"
       />
 
       {/* Content */}
-      <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(14px,3.5vw,24px)]">
+      <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(14px,3.5vw,24px)] p-8">
         <div className="flex items-center gap-3">
-          <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(1.75rem,6vw,2.5rem)]">
+          <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(2rem,6vw,2.5rem)]">
             TIME HAVEN CLUB
           </h1>
         </div>
 
-        <div className="font-[BrosOskon90] text-[clamp(1rem,3.2vw,1.25rem)]">
+        <div className="font-[BrosOskon90] text-[clamp(1.2rem,3.2vw,1.25rem)]">
           <p>Enzo Jester Somma – voce e chitarra</p>
           <p>Enza Maugeri – voce</p>
           <p>Salvo Savatteri – chitarra</p>
@@ -41,10 +41,10 @@ function BandPage() {
         />
 
         <div className="flex flex-col gap-[clamp(8px,2.5vw,12px)]">
-          <h2 className="italic font-[BrosOskon90] font-semibold [font-synthesis:weight_style] text-[clamp(1.125rem,3.5vw,1.5rem)]">
+          <h2 className="italic font-[BrosOskon90] font-semibold [font-synthesis:weight_style] text-[clamp(1.4rem,3.5vw,1.5rem)]">
             Biografia
           </h2>
-          <p className="font-[BrosOskon90] text-[clamp(1rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
+          <p className="font-[BrosOskon90] text-[clamp(1.2rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
             Questa sera vi presenteremo, per la prima volta dal vivo, un’opera che
             nasce dal buio, ma non per spaventarvi, ma per raccontarvi una storia,
           una storia che, forse, è anche la vostra. Un concept album ispirato
