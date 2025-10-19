@@ -19,7 +19,7 @@ function BandPage() {
       {/* Content */}
       <div className="relative z-10 w-[min(92vw,720px)] flex flex-col gap-[clamp(18px,3.5vw,24px)] p-8">
         <div className="flex items-center gap-3">
-          <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(2.2rem,6vw,2.5rem)]">
+          <h1 className="font-[Lexington] text-foreground tracking-wide leading-[1.1] text-[clamp(2rem,6vw,2.5rem)]">
             TIME HAVEN CLUB
           </h1>
         </div>
