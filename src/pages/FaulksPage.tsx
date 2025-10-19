@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 
 function FaulksPage() {
   return (
-    <div className="relative h-screen w-screen overflow-y-auto flex items-center justify-center p-[clamp(12px,4vw,24px)]">
+    <div className="relative h-dvh w-screen overflow-y-auto flex items-center justify-center p-[clamp(12px,4vw,24px)]">
       {/* Background */}
       <img
         src={Sfondo}
