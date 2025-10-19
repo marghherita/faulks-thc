@@ -12,7 +12,7 @@ function FaulksPage() {
         aria-hidden
         decoding="async"
         loading="eager"
-        className="absolute inset-0 z-0 h-full w-full object-fit pointer-events-none select-none"
+        className="absolute inset-0 z-0 min-h-lvh w-full object-fit pointer-events-none select-none"
       />
 
       {/* Content */}
