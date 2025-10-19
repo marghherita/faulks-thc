@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 function FaulksPage() {
   return (
-    <div className="relative min-h-lvh w-screen overflow-y-auto">
+    <div className="relative min-h-lvh w-screen overflow-y-auto p-[clamp(12px,4vw,24px)]">
       {/* Background */}
       <img
         src={Sfondo}
@@ -18,7 +18,7 @@ function FaulksPage() {
       />
 
       {/* Content */}
-      <div className="relative z-10 min-h-dvh w-full flex items-center justify-center p-[clamp(12px,4vw,24px)]">
+      <div className="relative z-10 min-h-dvh w-full flex items-center justify-center py-8">
         <div className="w-[min(92vw,720px)] flex flex-col gap-[clamp(18px,3.5vw,24px)] p-8 pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-[var(--safe-top)]">
           <div className="flex items-center gap-3">
             <FaulksStory />
@@ -46,11 +46,11 @@ function FaulksPage() {
               vicino a ciò che non osa dire ad alta voce. Siete pronti ad
               ascoltare? A guardare in faccia l’oscurità senza distogliere lo
               sguardo? <br /> Allora fatevi avanti e lasciate che la notte vi
-              parli. Questo è Folks, un idea nata al tempo di quella notte buia
+              parli. Questo è Faulks, un'idea nata al tempo di quella notte buia
               che fu la pandemia e che nel corso degli anni ha chiesto di essere
               realizzata. <br />
-              Folks è una realtà, immaginaria, ma, una realtà.
-              <br /> Folks, è...un punto di vista.
+              Faulks è una realtà, immaginaria, ma, una realtà.
+              <br /> Faulks, è...un punto di vista.
             </p>
           </div>
 

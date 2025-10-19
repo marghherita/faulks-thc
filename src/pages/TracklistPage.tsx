@@ -79,7 +79,10 @@ function TracklistPage() {
           </div>
         </div>
 
-        <Link to="/lyrics">
+        <Link
+          to="/lyrics"
+          className="flex flex-col items-center justify-center"
+        >
           <TestiButton />
         </Link>
 
