@@ -1,3 +1,4 @@
+import TracklistPage from '@/pages/TracklistPage'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/tracklist')({
@@ -5,5 +6,5 @@ export const Route = createFileRoute('/tracklist')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/tracklist"!</div>
+  return <TracklistPage />; 
 }
