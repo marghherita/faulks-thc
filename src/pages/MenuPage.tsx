@@ -20,10 +20,16 @@ function MenuPage() {
         <Link to="/band">
           <BandButton />
         </Link>
-       
-        <FaulksButton />
-        <TracklistButton />
-        <LyricsButton />
+
+        <Link to="/faulks">
+          <FaulksButton />
+        </Link>
+        <Link to="/tracklist">
+          <TracklistButton />
+        </Link>
+        <Link to="/lyrics">
+          <LyricsButton />
+        </Link>
       </div>
     </div>
   );

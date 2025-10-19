@@ -1,3 +1,4 @@
+import FaulksPage from '@/pages/FaulksPage';
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/faulks')({
@@ -5,5 +6,5 @@ export const Route = createFileRoute('/faulks')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/faulks"!</div>
+  return <FaulksPage />;
 }
