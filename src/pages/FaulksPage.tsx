@@ -22,7 +22,7 @@ function FaulksPage() {
         </div>
 
         <div className="flex flex-col gap-[clamp(8px,2.5vw,12px)]">
-          <p className="font-[BrosOskon90] text-[clamp(1.2rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
+          <p className="font-[BrosOskon90] text-[clamp(1.3rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
             Buonasera a tutti. Questa non è solo una serata di musica. Questa è
             una discesa. Un viaggio nell’ombra che ogni essere umano porta con
             sé… anche quando finge di non vederla. <br /> Stasera vi
