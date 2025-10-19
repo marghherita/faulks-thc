@@ -45,40 +45,23 @@ function BandPage() {
           <Bio />
 
           <p className="font-[BrosOskon90] text-[clamp(1.3rem,3.2vw,1.125rem)] ">
-            Questa sera vi presenteremo, per la prima volta dal vivo, un’opera
-            che nasce dal buio, ma non per spaventarvi, ma per raccontarvi una
-            storia, una storia che, forse, è anche la vostra. <br /> Un concept
-            album ispirato alle atmosfere e ai tormenti di Edgar Allan Poe, dove
-            vi addentrerete nel labirinto mentale di un uomo che ha deciso, con
-            grande stile e un pizzico di disperazione, di isolarsi dal mondo.
-            <br /> Perché? Perché il mondo è un posto complicato. Troppa dubbi,
-            troppi mali, troppi errori. E così poco tempo.
+            Nati nei primi anni ’90 come Golconda, i Time Haven Club hanno
+            attraversato stagioni di silenzio, rinascite e trasformazioni. Dai
+            primi demotape strumentali (First Tape, Another Ending Season) al
+            ritorno nel 2014 con una nuova voce: più matura, più personale.
             <br />
-            <br /> Il nostro protagonista, un comune uomo con moderni affanni e
-            antichi fardelli, ha scelto di chiudersi in se stesso.
-            <br /> Sogna l’isolamento come salvezza, ma teme il silenzio che
-            porta con sé.
-            <br /> E ha perso. Ha perso strade, occasioni, persone care. E nel
-            vuoto che lasciano, ha trovato parole. Suoni. E da lì, in un tempo
-            indefinito, abbiamo scritto quest'opera fuori posto. La nostra
-            personale visione dell'uomo della folla.
-            <br /> Noi, i Time Haven Club, siamo qui oggi per raccontarvi il suo
-            viaggio.
-            <br /> Una storia fatta, fissando un mare piatto, di stelle che non
-            danno risposte, di case di Lego buie, mesi di dicembre che vorremmo
-            eterni e altri pensieri al tramonto. Una storia che si muove tra
-            l’ossessione, la solitudine, e quella nebbia che chiamiamo
-            “memoria”.
             <br />
-            <br /> Preparatevi a viaggiare con noi.
-            <br /> Non servono bagagli, solo un po’ di coraggio e la voglia di
-            guardare dentro.
+            Nel 2017 arriva l’EP Despite All This Darkness. Nel 2021 il primo
+            album ufficiale Gathered at Dusk, firmato con G.T. Music
+            Distribution.
             <br />
-            Dentro di voi. Dentro di lui. Dentro il buio.
             <br />
-            Benvenuti nei meandri di Faulks! <br />
+            Ora è tempo di FAULKS (2025): un’opera rock in due atti, da vivere
+            solo dal vivo, nei piccoli teatri. Un concept ispirato a Poe, ma
+            profondamente autobiografico. Liriche, melodie, visioni.
             <br />
-            Time Haven Club.
+            <br /> Il viaggio continua. E stavolta, si entra nel cuore della
+            notte.
           </p>
         </div>
 
