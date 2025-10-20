@@ -187,7 +187,7 @@
 
 
 .liquid-glass {
-  width: 11rem;
+  width: auto;
   height: 4rem;
   border-radius: 56.00000000000001px;
   position: relative;
@@ -198,7 +198,7 @@
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.169);
   background: none;
-  padding: 0;
+
   margin: 0;
   text-decoration: none;
   cursor: pointer;
