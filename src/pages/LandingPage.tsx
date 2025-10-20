@@ -20,7 +20,7 @@ function LandingPage() {
       />
 
       {/* Foreground content */}
-      <div className="relative z-10 h-[50%] pt-16 items-center flex flex-col justify-between ">
+      <div className="relative z-10 h-[50%] pt-14 items-center flex flex-col justify-between ">
         <div className="items-center flex flex-col justify-center">
           <ThcLogo />
           <p className="text-[#FEF3D9] font-[BrosOskon90] font-light text-[1.8rem]">
