@@ -3,7 +3,7 @@ import ThcLogo from "/src/assets/images/thc.svg?react";
 import FaulksLanding from "/src/assets/images/faulks-landing.svg?react";
 import SfondoLanding from "/src/assets/images/sfondo_landing.png";
 
-import { Link } from "@tanstack/react-router";
+
 
 function LandingPage() {
   return (
