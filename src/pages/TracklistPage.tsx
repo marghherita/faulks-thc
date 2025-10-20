@@ -67,7 +67,7 @@ function TracklistPage() {
                 3. IL BUIO NELLA CASA DI LEGO
               </li>
               <li className="font-[BrosOskon90] text-[clamp(1.3rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
-                4. TWELVEMONTHSOFDECEMBER
+                4. DODICIMESIDIDICEMBRE
               </li>
               <li className="font-[BrosOskon90] text-[clamp(1.3rem,3.2vw,1.125rem)] leading-[clamp(1.45,2.5vw,1.7)]">
                 5. EUPHORIA
@@ -79,7 +79,10 @@ function TracklistPage() {
           </div>
         </div>
 
-        <Link to="/lyrics">
+        <Link
+          to="/lyrics"
+          className="flex flex-col items-center justify-center"
+        >
           <TestiButton />
         </Link>
 
