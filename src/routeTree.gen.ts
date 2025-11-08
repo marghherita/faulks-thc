@@ -15,6 +15,8 @@ import { Route as LyricsRouteImport } from './routes/lyrics'
 import { Route as FaulksRouteImport } from './routes/faulks'
 import { Route as BandRouteImport } from './routes/band'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LyricsIndexRouteImport } from './routes/lyrics.index'
+import { Route as LyricsSlugRouteImport } from './routes/lyrics.$slug'
 
 const TracklistRoute = TracklistRouteImport.update({
   id: '/tracklist',
@@ -46,37 +48,67 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LyricsIndexRoute = LyricsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LyricsRoute,
+} as any)
+const LyricsSlugRoute = LyricsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => LyricsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
-  '/lyrics': typeof LyricsRoute
+  '/lyrics': typeof LyricsRouteWithChildren
   '/menu': typeof MenuRoute
   '/tracklist': typeof TracklistRoute
+  '/lyrics/$slug': typeof LyricsSlugRoute
+  '/lyrics/': typeof LyricsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
-  '/lyrics': typeof LyricsRoute
   '/menu': typeof MenuRoute
   '/tracklist': typeof TracklistRoute
+  '/lyrics/$slug': typeof LyricsSlugRoute
+  '/lyrics': typeof LyricsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
-  '/lyrics': typeof LyricsRoute
+  '/lyrics': typeof LyricsRouteWithChildren
   '/menu': typeof MenuRoute
   '/tracklist': typeof TracklistRoute
+  '/lyrics/$slug': typeof LyricsSlugRoute
+  '/lyrics/': typeof LyricsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/band' | '/faulks' | '/lyrics' | '/menu' | '/tracklist'
+  fullPaths:
+    | '/'
+    | '/band'
+    | '/faulks'
+    | '/lyrics'
+    | '/menu'
+    | '/tracklist'
+    | '/lyrics/$slug'
+    | '/lyrics/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/band' | '/faulks' | '/lyrics' | '/menu' | '/tracklist'
+  to:
+    | '/'
+    | '/band'
+    | '/faulks'
+    | '/menu'
+    | '/tracklist'
+    | '/lyrics/$slug'
+    | '/lyrics'
   id:
     | '__root__'
     | '/'
@@ -85,13 +117,15 @@ export interface FileRouteTypes {
     | '/lyrics'
     | '/menu'
     | '/tracklist'
+    | '/lyrics/$slug'
+    | '/lyrics/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BandRoute: typeof BandRoute
   FaulksRoute: typeof FaulksRoute
-  LyricsRoute: typeof LyricsRoute
+  LyricsRoute: typeof LyricsRouteWithChildren
   MenuRoute: typeof MenuRoute
   TracklistRoute: typeof TracklistRoute
 }
@@ -140,14 +174,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lyrics/': {
+      id: '/lyrics/'
+      path: '/'
+      fullPath: '/lyrics/'
+      preLoaderRoute: typeof LyricsIndexRouteImport
+      parentRoute: typeof LyricsRoute
+    }
+    '/lyrics/$slug': {
+      id: '/lyrics/$slug'
+      path: '/$slug'
+      fullPath: '/lyrics/$slug'
+      preLoaderRoute: typeof LyricsSlugRouteImport
+      parentRoute: typeof LyricsRoute
+    }
   }
 }
+
+interface LyricsRouteChildren {
+  LyricsSlugRoute: typeof LyricsSlugRoute
+  LyricsIndexRoute: typeof LyricsIndexRoute
+}
+
+const LyricsRouteChildren: LyricsRouteChildren = {
+  LyricsSlugRoute: LyricsSlugRoute,
+  LyricsIndexRoute: LyricsIndexRoute,
+}
+
+const LyricsRouteWithChildren =
+  LyricsRoute._addFileChildren(LyricsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BandRoute: BandRoute,
   FaulksRoute: FaulksRoute,
-  LyricsRoute: LyricsRoute,
+  LyricsRoute: LyricsRouteWithChildren,
   MenuRoute: MenuRoute,
   TracklistRoute: TracklistRoute,
 }

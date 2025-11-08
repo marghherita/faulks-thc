@@ -2,6 +2,7 @@ import { Button } from "../components/ui/button";
 import ThcLogo from "/src/assets/images/thc.svg?react";
 import FaulksLanding from "/src/assets/images/faulks-landing.svg?react";
 import SfondoLanding from "/src/assets/images/sfondo_landing.png";
+import { Link } from "@tanstack/react-router";
 
 
 
@@ -20,7 +21,7 @@ function LandingPage() {
       />
 
       {/* Foreground content */}
-      <div className="relative z-10 h-[50%] pt-14 items-center flex flex-col justify-between ">
+      <div className="relative z-10 h-[50%] pt-12 items-center flex flex-col justify-between ">
         <div className="items-center flex flex-col justify-center">
           <ThcLogo />
           <p className="text-[#FEF3D9] font-[BrosOskon90] font-light text-[1.8rem]">
@@ -36,11 +37,12 @@ function LandingPage() {
         </div>
       </div>
 
-      {/* <Link to="/menu" className="relative z-10">
-      </Link> */}
       <Button variant="start" className="liquid-glass px-8 disabled">
-        COMING SOON
+        <Link to="/menu" className="relative z-10">
+          INIZIA
+        </Link>
       </Button>
+
     </div>
   );
 }
