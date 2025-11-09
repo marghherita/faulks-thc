@@ -14,7 +14,7 @@ export const lyrics: Lyric[] = [
         id: 1,
         slug: "from-dusk-to-creation",
         title: "FROM DUSK TO CREATION",
-        pathSvg: "public\from-dusk.svg",
+        pathSvg: "/src/assets/images/from-dusk.svg?react",
         intro: "Nel silenzio ovattato del mattino, un sussulto improvviso rompe l’immobilità: la mente, ancora annebbiata, si muove tra la confusione e la malinconia. In questa alba interiore, ogni nota è una traccia ed ogni parola un frammento di verità da ricomporre.",
         strumental: true,
         lyricEnglish: "Tuning, synchronized with my heart, <br /> I felt my beats like it was the first time. I'm drawing all the lines of the stars. The blackest morning sun in my eyes and crimson dew. Oh mirror.mirror, mirror of my desires, mark this moment, my life starts from here… Later on the way home I will fall, I'm no longer what I was trying to be, oh, oh no.",
