@@ -18,9 +18,13 @@ export default defineConfig({
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
-    svgr(),
+    svgr({
+      svgrOptions: {
+        exportType: 'default',
+      },
+    }),
     tailwindcss(),
-    qrcode() 
+    qrcode()
   ],
   resolve: {
     alias: {
