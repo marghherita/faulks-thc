@@ -10,11 +10,6 @@ import { useState } from "react";
 import FromDusk from "/src/assets/images/from-dusk.svg?react";
 
 
-// Mapping from pathSvg string to React component
-const svgComponents: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-    "/src/assets/images/from-dusk.svg?react": FromDusk,
-
-};
 
 function LyricsDetailPage({ slug }: { slug: string }) {
     const lyric = lyrics.find((l) => l.slug === slug) ?? {
@@ -30,8 +25,18 @@ function LyricsDetailPage({ slug }: { slug: string }) {
 
     const [lang, setLang] = useState<"en" | "it">("en");
 
-    // Get the SVG component from the mapping
-    const SvgComponent = svgComponents[lyric.pathSvg];
+
+
+    const getSvgComponent = () => {
+        switch (slug) {
+            case "from-dusk-to-creation":
+                return <FromDusk />
+                break;
+
+            default:
+                break;
+        }
+    }
 
     return (
         <div className="relative min-h-dvh w-screen overflow-y-auto flex  justify-start p-[clamp(12px,4vw,24px)]">
@@ -52,7 +57,7 @@ function LyricsDetailPage({ slug }: { slug: string }) {
                 <div className="flex flex-col gap-[clamp(2rem,2.5vw,12px)]">
                     <div className="flex flex-col gap-[clamp(1.8rem,2.5vw,12px)]">
 
-                        {SvgComponent && <SvgComponent />}
+                        {getSvgComponent()}
 
 
                         <div className="font-[BrosOskon90] text-[clamp(1.1rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line">
