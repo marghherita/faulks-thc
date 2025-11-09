@@ -59,6 +59,8 @@ function LyricsDetailPage({ slug }: { slug: string }) {
 
                         {getSvgComponent()}
 
+                        <FromDusk />
+
 
                         <div className="font-[BrosOskon90] text-[clamp(1.1rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line">
                             {lyric.intro}
