@@ -4,7 +4,7 @@ import Strumental from "/src/assets/images/strumental.svg?react";
 import Testo from "/src/assets/images/testo.svg?react";
 import Sfondo from "/src/assets/images/sfondo.png";
 import { lyrics } from "@/data/lyrics";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Import all SVG components
 import FromDusk from "/src/assets/images/titles/from-dusk.svg?react";
@@ -45,7 +45,11 @@ function LyricsDetailPage({ slug }: { slug: string }) {
 
     const [lang, setLang] = useState<"en" | "it">("en");
 
-
+    useEffect(() => {
+        if (slug === "il-buio-nella-casa-di-lego" || slug === "dodicimesididicembre") {
+            setLang("it");
+        }
+    }, [slug]);
 
     const getSvgComponent = () => {
 
@@ -139,9 +143,11 @@ function LyricsDetailPage({ slug }: { slug: string }) {
                             {lang === "en" ? <ButtonIta onClick={() => {
                                 setLang("it");
                             }} /> : (
-                                <ButtonEng onClick={() => {
-                                    setLang("en");
-                                }} />
+                                (slug === "il-buio-nella-casa-di-lego" || slug === "dodicimesididicembre") ? null : (
+                                    <ButtonEng onClick={() => {
+                                        setLang("en");
+                                    }} />
+                                )
                             )}
                         </div>
                     )}
