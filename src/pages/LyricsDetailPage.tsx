@@ -142,10 +142,12 @@ function LyricsDetailPage({ slug }: { slug: string }) {
                         <div className="flex flex-col items-center justify-center">
                             {lang === "en" ? <ButtonIta onClick={() => {
                                 setLang("it");
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
                             }} /> : (
                                 (slug === "il-buio-nella-casa-di-lego" || slug === "dodicimesididicembre") ? null : (
                                     <ButtonEng onClick={() => {
                                         setLang("en");
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }} />
                                 )
                             )}
@@ -157,7 +159,7 @@ function LyricsDetailPage({ slug }: { slug: string }) {
                 <div className="flex justify-end">
                     <Link
                         to="/lyrics"
-                        className="italic font-[BrosOskon90] text-[clamp(1.2rem,3vw,1.05rem)]"
+                        className="italic font-[BrosOskon90] text-[clamp(1.2rem,3vw,1.05rem)] "
                     >
                         ← Torna ai testi
                     </Link>
