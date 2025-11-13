@@ -9,16 +9,24 @@ import { useState } from "react";
 // Import all SVG components
 import FromDusk from "/src/assets/images/titles/from-dusk.svg?react";
 import Staring from "/src/assets/images/titles/staring.svg?react";
+import FissandoMare from "/src/assets/images/titles/fissandomare.svg?react";
 import Unseen from "/src/assets/images/titles/unseen.svg?react";
+import Invisibile from "/src/assets/images/titles/invisibile.svg?react";
 import TimeStars from "/src/assets/images/titles/time-stars.svg?react";
+import TempoStelle from "/src/assets/images/titles/tempostelle.svg?react";
 import AfterDark from "/src/assets/images/titles/after-dark.svg?react";
+import DopoTramonto from "/src/assets/images/titles/dopotramonto.svg?react";
 import ManCrowd from "/src/assets/images/titles/man-crowd.svg?react";
 import Cloudy from "/src/assets/images/titles/cloudy.svg?react";
 import Obsession from "/src/assets/images/titles/obsession.svg?react";
+import Ossessione from "/src/assets/images/titles/ossessione.svg?react";
 import Buio from "/src/assets/images/titles/buio.svg?react";
 import Dodicimesi from "/src/assets/images/titles/dodicimesi.svg?react";
 import Euphoria from "/src/assets/images/titles/euphoria.svg?react";
+import Euforia from "/src/assets/images/titles/euforia.svg?react";
 import Alone from "/src/assets/images/titles/alone.svg?react";
+import Solo from "/src/assets/images/titles/solo.svg?react";
+
 import { Link } from "@tanstack/react-router";
 
 
@@ -40,31 +48,33 @@ function LyricsDetailPage({ slug }: { slug: string }) {
 
 
     const getSvgComponent = () => {
+
+
         switch (slug) {
             case "from-dusk-to-creation":
                 return <FromDusk className="w-full" />
             case "starring-at-the-sea":
-                return <Staring className="w-full" />
+                return lang === "en" ? <Staring className="w-full" /> : <FissandoMare className="w-full" />
             case "the-unseen":
-                return <Unseen className="w-full" />
+                return lang === "en" ? <Unseen className="w-full" /> : <Invisibile className="w-full" />
             case "time-of-the-stars":
-                return <TimeStars className="w-full" />
+                return lang === "en" ? <TimeStars className="w-full" /> : <TempoStelle className="w-full" />
             case "after-dark":
-                return <AfterDark className="w-full" />
+                return lang === "en" ? <AfterDark className="w-full" /> : <DopoTramonto className="w-full" />
             case "the-man-of-the-crowd":
                 return <ManCrowd className="w-full" />
             case "cloudy-memories":
                 return <Cloudy className="w-full" />
             case "obsession":
-                return <Obsession className="w-full" />
+                return lang === "en" ? <Obsession className="w-full" /> : <Ossessione className="w-full" />
             case "il-buio-nella-casa-di-lego":
                 return <Buio className="w-full" />
             case "dodicimesididicembre":
                 return <Dodicimesi className="w-full" />
             case "euphoria":
-                return <Euphoria className="w-full" />
+                return lang === "en" ? <Euphoria className="w-full" /> : <Euforia className="w-full" />
             case "alone-eve-of-the-end":
-                return <Alone className="w-full" />
+                return lang === "en" ? <Alone className="w-full" /> : <Solo className="w-full" />
             default:
                 break;
         }
@@ -94,7 +104,7 @@ function LyricsDetailPage({ slug }: { slug: string }) {
                             {getSvgComponent()}
                         </div>
                         <div
-                            className="font-[BrosOskon90] text-[clamp(1.1rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line"
+                            className="font-[BrosOskon90] text-[clamp(1.2rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line"
                             dangerouslySetInnerHTML={{ __html: lyric.intro }}
                         />
 
@@ -108,7 +118,7 @@ function LyricsDetailPage({ slug }: { slug: string }) {
 
                         {lyric.strumental ? null : (
                             <div
-                                className="font-[BrosOskon90] text-[clamp(1.1rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line"
+                                className="font-[BrosOskon90] text-[clamp(1.2rem,2.8vw,1rem)] leading-[clamp(1.4,2.2vw,1.6)] whitespace-pre-line"
                                 dangerouslySetInnerHTML={{ __html: lang === "en" ? (lyric.lyricEnglish ?? "") : (lyric.lyricItalian ?? "") }}
                             />
                         )}
