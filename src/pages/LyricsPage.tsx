@@ -31,7 +31,7 @@ function LyricsPage() {
 
                         {lyrics.map((lyric) => (
                             <Link
-                                className="focus:outline-none focus:ring-0 focus:ring-offset-0 focus:text-black"
+                                className="hover:text-black focus-visible:text-black active:text-black"
                                 key={lyric.id.toString()}
                                 to="/lyrics/$slug"
                                 params={{ slug: lyric.slug }}
