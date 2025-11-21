@@ -39,11 +39,11 @@ function LandingPage() {
 
       <div className="flex flex-col gap-2">
 
-        <Button variant="start" className="liquid-glass px-8 disabled">
+        {/* <Button variant="start" className="liquid-glass px-8 disabled">
           <a href="https://www.ctbox.it/C23/6031/Content.aspx/Eventi/Concerti/TIME_HAVEN_CLUB_in_%22FAULKS" target="_blank" rel="noopener noreferrer" className="relative z-10">
             BIGLIETTI
           </a>
-        </Button>
+        </Button> */}
         <Button variant="start" className="liquid-glass px-8 disabled">
           <Link to="/menu" className="relative z-10">
             INIZIA
