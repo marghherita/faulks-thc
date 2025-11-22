@@ -14,6 +14,7 @@ import { Route as MenuRouteImport } from './routes/menu'
 import { Route as LyricsRouteImport } from './routes/lyrics'
 import { Route as FaulksRouteImport } from './routes/faulks'
 import { Route as BandRouteImport } from './routes/band'
+import { Route as AlertRouteImport } from './routes/alert'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LyricsIndexRouteImport } from './routes/lyrics.index'
 import { Route as LyricsSlugRouteImport } from './routes/lyrics.$slug'
@@ -43,6 +44,11 @@ const BandRoute = BandRouteImport.update({
   path: '/band',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AlertRoute = AlertRouteImport.update({
+  id: '/alert',
+  path: '/alert',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,6 +67,7 @@ const LyricsSlugRoute = LyricsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alert': typeof AlertRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
   '/lyrics': typeof LyricsRouteWithChildren
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alert': typeof AlertRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
   '/menu': typeof MenuRoute
@@ -81,6 +89,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alert': typeof AlertRoute
   '/band': typeof BandRoute
   '/faulks': typeof FaulksRoute
   '/lyrics': typeof LyricsRouteWithChildren
@@ -93,6 +102,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/alert'
     | '/band'
     | '/faulks'
     | '/lyrics'
@@ -103,6 +113,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/alert'
     | '/band'
     | '/faulks'
     | '/menu'
@@ -112,6 +123,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/alert'
     | '/band'
     | '/faulks'
     | '/lyrics'
@@ -123,6 +135,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlertRoute: typeof AlertRoute
   BandRoute: typeof BandRoute
   FaulksRoute: typeof FaulksRoute
   LyricsRoute: typeof LyricsRouteWithChildren
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BandRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/alert': {
+      id: '/alert'
+      path: '/alert'
+      fullPath: '/alert'
+      preLoaderRoute: typeof AlertRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -206,6 +226,7 @@ const LyricsRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlertRoute: AlertRoute,
   BandRoute: BandRoute,
   FaulksRoute: FaulksRoute,
   LyricsRoute: LyricsRouteWithChildren,
