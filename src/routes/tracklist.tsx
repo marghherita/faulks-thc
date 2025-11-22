@@ -1,4 +1,4 @@
-import TracklistPage from '@/pages/TracklistPage'
+import AlertPage from '@/pages/AlertPage'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/tracklist')({
@@ -6,5 +6,5 @@ export const Route = createFileRoute('/tracklist')({
 })
 
 function RouteComponent() {
-  return <TracklistPage />; 
+  return <AlertPage />;
 }

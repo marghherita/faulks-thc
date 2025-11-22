@@ -1,4 +1,4 @@
-import MenuPage from '@/pages/MenuPage'
+import AlertPage from '@/pages/AlertPage'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/menu')({
@@ -6,5 +6,5 @@ export const Route = createFileRoute('/menu')({
 })
 
 function RouteComponent() {
-  return <MenuPage />
+  return <AlertPage />
 }

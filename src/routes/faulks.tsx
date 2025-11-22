@@ -1,4 +1,4 @@
-import FaulksPage from '@/pages/FaulksPage';
+import AlertPage from '@/pages/AlertPage';
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/faulks')({
@@ -6,5 +6,5 @@ export const Route = createFileRoute('/faulks')({
 })
 
 function RouteComponent() {
-  return <FaulksPage />;
+  return <AlertPage />;
 }
